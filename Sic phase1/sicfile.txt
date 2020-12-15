@@ -1,0 +1,27 @@
+1000    PRBN08   START   1000                   
+1000             LDA     ZERO                   001021
+1003             STA     INDEX                  0C1027
+1006    LOOP     LDA     ZERO                   001021
+1009             LDX     INDEX                  041027
+100c             STA     ALPHA,X                0C902A
+100f             LDA     INDEX                  001027
+1012             ADD     THREE                  181024
+1015             STA     INDEX                  0C1027
+1018             COMP    K300                   28101E
+101b             JLT     LOOP                   381006
+101e    K300     WORD    300                    00012C
+1021    ZERO     WORD    0                      000000
+1024    THREE    WORD    3                      000003
+1027    INDEX    RESW    1                      
+102a    ALPHA    RESW    100                    
+1156             END     PRBN08                 
+
+
+
+zero     1021
+prbn08     1000
+loop     1006
+alpha     102a
+k300     101e
+index     1027
+three     1024
